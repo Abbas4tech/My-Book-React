@@ -4,8 +4,12 @@ import Backdrop from "../UI/Backdrop";
 import Button from "../UI/Button";
 import Input from "../UI/Input";
 import classes from "./Form.module.css";
+import { formHandlerActions } from "../store/formSlice/formSlice";
+import { useDispatch } from "react-redux";
 
 const Form = () => {
+  const dispatch = useDispatch();
+
   const {
     value: firstName,
     isValid: firstNameIsValid,
@@ -39,6 +43,7 @@ const Form = () => {
     console.log(firstName, lastName);
     firstNameResetHandler();
     lastNameResetHandler();
+    dispatch(formHandlerActions.close());
   };
 
   return (
@@ -70,7 +75,9 @@ const Form = () => {
           error={lastNameHasError}
         />
         <section style={{ display: "flex", justifyContent: "flex-end" }}>
-          <Button>Cancel</Button>
+          <Button onPress={() => dispatch(formHandlerActions.close())}>
+            Cancel
+          </Button>
           <Button disabled={!formIsValid} type={"submit"}>
             Submit
           </Button>
