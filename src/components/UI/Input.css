@@ -4,11 +4,12 @@
 .input-box label {
   display: block;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
-.input-box input {
+.input-box input,
+.input-box textarea {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   border: 1px solid #240370;
 
   outline: none;
@@ -16,7 +17,8 @@
   padding: 0.5rem;
   font-size: 1.1rem;
 }
-.input-box input:focus {
+.input-box input:focus,
+.input-box textarea:focus {
   outline: none;
   background-color: #e9c9c7;
   border: none;
@@ -31,11 +33,13 @@
 .invalid label {
   color: red;
 }
-.invalid input {
+.invalid input,
+.invalid textarea {
   border: 1px solid #b40e0e;
   background-color: #fddddd;
 }
-.invalid input:focus {
+.invalid input:focus,
+.invalid textarea:focus {
   border-color: #ff8800;
   background-color: #fbe8d2;
 }

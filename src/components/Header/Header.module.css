@@ -4,5 +4,6 @@
   height: 5rem;
   display: flex;
   justify-content: space-between;
-  background-color: #e0cece;
+  color: white;
+  background-color: rgb(66, 66, 66);
 }

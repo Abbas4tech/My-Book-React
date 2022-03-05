@@ -1,0 +1,14 @@
+.article {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  background-color: rgb(248, 247, 247);
+  transition: 0.2s ease-in-out;
+  color: rgb(66, 66, 66);
+}
+.article:hover {
+  transform: translateY(-0.25rem);
+}
