@@ -1,0 +1,45 @@
+.input-box {
+  width: 100%;
+}
+.input-box label {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.input-box input {
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #240370;
+
+  outline: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.input-box input:focus {
+  outline: none;
+  background-color: #e9c9c7;
+  border: none;
+  border: 1px solid #8b0900;
+  outline: none;
+  border-color: #240370;
+  background-color: #e0d4fd;
+}
+
+/* ======== Error classes =============== */
+
+.invalid label {
+  color: red;
+}
+.invalid input {
+  border: 1px solid #b40e0e;
+  background-color: #fddddd;
+}
+.invalid input:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
+.invalid p {
+  margin-bottom: 00.5rem;
+  color: rgb(187, 19, 7);
+}

@@ -6,7 +6,7 @@ const Button = ({ onPress, type, children, disabled }) => {
     <>
       <button
         onClick={onPress}
-        type={type}
+        type={type || "button"}
         disabled={disabled}
         className={classes.button}
       >
