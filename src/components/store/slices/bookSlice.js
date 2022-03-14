@@ -9,6 +9,10 @@ const bookSlice = createSlice({
   name: "book",
   initialState: initialbooksState,
   reducers: {
+    replaceBooks(state, action) {
+      state.books = action.payload.books;
+      state.totalBooks = action.payload.totalBooks;
+    },
     addBook(state, action) {
       const newbook = action.payload;
       const existingbook = state.books.find(
