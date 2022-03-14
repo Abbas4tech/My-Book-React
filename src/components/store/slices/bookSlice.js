@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialbooksState = {
   books: [],
   totalBooks: 0,
+  changed: false,
 };
 
 const bookSlice = createSlice({
@@ -15,6 +16,7 @@ const bookSlice = createSlice({
     },
     addBook(state, action) {
       const newbook = action.payload;
+      state.changed = true;
       const existingbook = state.books.find(
         (book) =>
           book.bookName === newbook.bookName &&
@@ -29,6 +31,7 @@ const bookSlice = createSlice({
     },
     removeBook(state, action) {
       const id = action.payload;
+      state.changed = true;
       state.books = state.books.filter((book) => book.id !== id);
       state.totalBooks--;
     },
