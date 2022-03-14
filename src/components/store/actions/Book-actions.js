@@ -6,8 +6,8 @@ export const fetchBookData = () => {
     dispatch(
       notificationActions.showNotification({
         status: "Pending",
-        title: "Getting Book Data",
-        message: "Please Wait!",
+        title: "Getting...",
+        message: "Getting Books Data!",
       })
     );
     const fetchData = async () => {
@@ -31,7 +31,7 @@ export const fetchBookData = () => {
       dispatch(
         notificationActions.showNotification({
           status: "success",
-          title: "Found Book Data!",
+          title: "Yayyy!",
           message: "Book Data Found Successfully!",
         })
       );
@@ -39,7 +39,7 @@ export const fetchBookData = () => {
       console.log(error.message);
       dispatch(
         notificationActions.showNotification({
-          status: error,
+          status: "error",
           title: "Error!",
           message: "Sent Book Data Failed!",
         })
