@@ -6,8 +6,8 @@ export const fetchBookData = () => {
     dispatch(
       notificationActions.showNotification({
         status: "Pending",
-        title: "Getting...",
-        message: "Getting Books Data!",
+        title: "Ummm...",
+        message: "Fetching Books Data!",
       })
     );
     const fetchData = async () => {
@@ -41,7 +41,7 @@ export const fetchBookData = () => {
         notificationActions.showNotification({
           status: "error",
           title: "Error!",
-          message: "Sent Book Data Failed!",
+          message: "Fetching Book Data Failed!",
         })
       );
     }
