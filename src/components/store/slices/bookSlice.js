@@ -16,12 +16,14 @@ const bookSlice = createSlice({
     },
     addBook(state, action) {
       const newbook = action.payload;
+      console.log(newbook);
+      console.log(state.books);
       state.changed = true;
       const existingbook = state.books.find(
         (book) =>
-          book.bookName === newbook.bookName &&
-          book.authorName === newbook.authorName
+          book.book === newbook.book && book.authorName === newbook.authorName
       );
+      console.log(existingbook);
       if (!existingbook) {
         state.books.push(newbook);
         state.totalBooks++;
