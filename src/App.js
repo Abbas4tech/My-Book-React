@@ -39,14 +39,17 @@ function App() {
 
   return (
     <>
-      {notification && (
-        <Notification
-          status={notification.status}
-          title={notification.title}
-          message={notification.message}
-        />
-      )}
-      <Header />
+      <div style={{ position: "sticky", top: 0 }}>
+        {notification && (
+          <Notification
+            status={notification.status}
+            title={notification.title}
+            message={notification.message}
+          />
+        )}
+        <Header />
+      </div>
+
       {formIsOpen && <Form />}
       <UserList />
     </>
